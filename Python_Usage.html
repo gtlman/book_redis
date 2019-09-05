@@ -1,0 +1,359 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>与Python交互 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Characteristic.html" />
+    
+    
+    <link rel="prev" href="Distributed.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Support_Type&Usage.html">
+            
+                <a href="Support_Type&Usage.html">
+            
+                    
+                    支持的数据类型以及对应的应用场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Storage.html">
+            
+                <a href="Storage.html">
+            
+                    
+                    持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Distributed.html">
+            
+                <a href="Distributed.html">
+            
+                    
+                    分布式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="Python_Usage.html">
+            
+                <a href="Python_Usage.html">
+            
+                    
+                    与Python交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Characteristic.html">
+            
+                <a href="Characteristic.html">
+            
+                    
+                    特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >与Python交互</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E0E;python&#x4EA4;&#x4E92;"><center>&#x4E0E;Python&#x4EA4;&#x4E92;</center></h1>
+<p>&#x4E3B;&#x8981;&#x6D89;&#x53CA;python&#x4EE5;&#x53CA;django&#x5982;&#x4F55;&#x4F7F;&#x7528;redis</p>
+<h2 id="&#x4E0E;python&#x4EA4;&#x4E92;"><center>&#x4E0E;Python&#x4EA4;&#x4E92;</center></h2>
+<p>&#x9700;&#x8981;&#x7528;&#x5230;<code>redis-py</code>&#x6A21;&#x5757;</p>
+<h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<p><code>pip install redis</code></p>
+<h3 id="&#x4F7F;&#x7528;&#x65B9;&#x5F0F;">&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h3>
+<p>&#x51E0;&#x4E4E;&#x662F;&#x5B8C;&#x5168;&#x6A21;&#x62DF;redis&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x64CD;&#x4F5C;</p>
+<p>redis-py3.0&#x53EA;&#x652F;&#x6301;bytes,str,number&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5176;&#x5B83;&#x7684;&#x6570;&#x636E;redis-py&#x90FD;&#x4F1A;&#x629B;&#x51FA;DataError&#x5F02;&#x5E38;</p>
+<pre><code>import redis
+r = redis.Redis(host=&apos;localhost&apos;, port=6379, db=0)
+r.set(&apos;foo&apos;, &apos;bar&apos;)         #&#x63D2;&#x5165;&#x6210;&#x529F;&#x8FD4;&#x56DE;True, &#x5982;&#x679C;&#x63D2;&#x5165;&#x5931;&#x8D25;&#x5219;&#x4F1A;&#x8FD4;&#x56DE;False
+r.get(&apos;foo&apos;)                #&#x8FD4;&#x56DE;&apos;bar&apos;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7A7A;&#x5219;&#x5565;&#x8FD4;&#x56DE;None
+r.mset({&apos;s1&apos;:1,&apos;s2&apos;:2})     #&#x8FD4;&#x56DE;True
+r.msetnx({&apos;s1&apos;:1,&apos;s2&apos;:2})   #&#x8FD4;&#x56DE;False
+r.zadd(&apos;zs1&apos;, {&apos;s1&apos;:1,&apos;s2&apos;:2}, nx=True, xx=False, ch=True, incr=False)      #&#x8FD4;&#x56DE;2
+#&#x56E0;&#x4E3A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x5728;&#x540E;&#x9762;&#xFF0C;&#x56E0;&#x6B64;&#x4E0A;&#x8FF0;&#x64CD;&#x4F5C;&#x8DDF;&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x6709;&#x51FA;&#x5165;
+&#x5176;&#x5B83;zincrby&#x5565;&#x7684;&#x90FD;&#x8DDF;&#x539F;&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;&#x4E00;&#x81F4;
+</code></pre><p><strong><em>&#x6CE8;&#x610F;&#x4E8B;&#x9879;</em></strong>&#xFF1A;</p>
+<pre><code>SELECT: &#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#xFF0C;&#x65E0;&#x6CD5;&#x5207;&#x6362;&#x6570;&#x636E;&#x5E93;
+DEL&#xFF1A; del &#x4E0E; python &#x7684;&#x5173;&#x952E;&#x5B57;&#x51B2;&#x7A81;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#x7528; delete &#x66FF;&#x6362;-----&gt;r.delete(&apos;foo&apos;) #&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;1&#xFF0C;&#x5931;&#x8D25;&#x5219;&#x8FD4;&#x56DE;0
+MULTI/EXEC: &#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4E3A; Pipeline &#x7BA1;&#x9053;&#x7C7B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;transaction=False&#x53D6;&#x6D88;
+</code></pre><h3 id="locks&#x9501;">Locks&#x9501;</h3>
+<p>redis-py3.0&#x4E0D;&#x518D;&#x652F;&#x6301;&#x57FA;&#x4E8E;&#x7BA1;&#x9053;&#x7684;&#x9501;&#xFF0C;&#x73B0;&#x5728;&#x53EA;&#x652F;&#x6301;&#x57FA;&#x4E8E;LUA&#x7684;&#x9501;&#xFF0C;&#x539F;&#x6765;&#x7684;LuaLock&#x5DF2;&#x6539;&#x540D;&#x4E3A;Lock&#xFF0C;&#x4E5F;&#x56E0;&#x6B64;redis-py3.0&#x8981;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x6700;&#x4F4E;&#x662F;2.6&#x7248;&#x672C;&#x4EE5;&#x4E0A;</p>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x4E0B;&#x6587;&#x8FDB;&#x884C;&#x52A0;&#x9501;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;blocking_timeout&#x7684;&#x65F6;&#x95F4;&#x8FD8;&#x6CA1;&#x83B7;&#x53D6;&#x9501;&#x5C31;&#x4F1A;&#x629B;&#x51FA;LockError&#x5F02;&#x5E38;</p>
+<pre><code>try:
+    with r.lock(&apos;my-lock-key&apos;, blocking_timeout=5) as lock:
+        # code you want executed only after the lock has been acquired
+except LockError:
+    # the lock wasn&apos;t acquired
+</code></pre><h3 id="pipelines-&#x7BA1;&#x9053;">Pipelines &#x7BA1;&#x9053;</h3>
+<p>&#x662F;redis&#x7C7B;&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x901A;&#x8FC7;&#x5C06;&#x547D;&#x4EE4;&#x7F13;&#x5B58;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x6B21;&#x6027;&#x6253;&#x5305;&#x6279;&#x91CF;&#x63D0;&#x4EA4;&#xFF0C;&#x6765;&#x63D0;&#x9AD8;&#x6027;&#x80FD;</p>
+<pre><code>r = redis.Redis(...)
+r.set(&apos;bing&apos;, &apos;baz&apos;)
+# &#x901A;&#x8FC7;pipeline&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;pipeline&#x7C7B;
+pipe = r.pipeline()
+# &#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;
+pipe.set(&apos;foo&apos;, &apos;bar&apos;)
+pipe.get(&apos;bing&apos;)
+# &#x8C03;&#x7528;execute&#x65B9;&#x6CD5;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x7F13;&#x5B58;&#x7684;&#x547D;&#x4EE4;&#x53D1;&#x9001;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;
+# &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4F1A;&#x7EC4;&#x5408;&#x6210;list&#x5E76;&#x8FD4;&#x56DE;
+pipe.execute()  #[True, None]
+
+# &#x800C;&#x4E14;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;pipeline&#x7C7B;&#x8FD8;&#x652F;&#x6301;&#x94FE;&#x5F0F;
+pipe.set(&apos;foo&apos;, &apos;bar&apos;).sadd(&apos;faz&apos;, &apos;baz&apos;).incr(&apos;auto_number&apos;).execute() #&#x8FD4;&#x56DE;[True, 1, 1]
+</code></pre><h2 id="&#x4E0E;django&#x7684;&#x4EA4;&#x4E92;"><center>&#x4E0E;Django&#x7684;&#x4EA4;&#x4E92;</center></h2>
+<p><a href="https://django-redis-chs.readthedocs.io/zh_CN/latest/" title="django-redis&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">django-redis&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></p>
+<h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<p>pip install django-redis</p>
+<p>&#x6240;&#x6709;&#x7248;&#x672C;&#x7684; django-redis &#x57FA;&#x4E8E; redis-py &gt;= 2.10.0&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;redis-py</p>
+<h3 id="django&#x914D;&#x7F6E;">Django&#x914D;&#x7F6E;</h3>
+<pre><code>CACHES = {
+    &quot;default&quot;: {
+        &quot;BACKEND&quot;: &quot;django_redis.cache.RedisCache&quot;,
+        &quot;LOCATION&quot;: &quot;redis://127.0.0.1:6379/1&quot;,
+        &quot;OPTIONS&quot;: {
+            &quot;CLIENT_CLASS&quot;: &quot;django_redis.client.DefaultClient&quot;,
+            &quot;PASSWORD&quot;: &quot;mysecret&quot;
+        }
+    }
+}
+</code></pre><p>Django &#x4F1A;&#x5C06;&#x4E0A;&#x8FF0;redis&#x5E93;&#x4F5C;&#x4E3A; session &#x50A8;&#x5B58;&#x540E;&#x7AEF;</p>
+<p>&#x539F;&#x751F;&#x5BA2;&#x6237;&#x7AEF;</p>
+<pre><code>from django_redis import get_redis_connection
+con = get_redis_connection(&quot;default&quot;)       #con&#x5C31;&#x53EF;&#x4EE5;&#x50CF;&#x4E0A;&#x9762;&#x7684;&#x8FDE;&#x63A5;&#x4E00;&#x6837;&#x64CD;&#x4F5C;&#x4E86;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Distributed.html" class="navigation navigation-prev " aria-label="Previous page: 分布式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Characteristic.html" class="navigation navigation-next " aria-label="Next page: 特点">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"与Python交互","level":"1.5","depth":1,"next":{"title":"特点","level":"1.6","depth":1,"path":"Characteristic.md","ref":"Characteristic.md","articles":[]},"previous":{"title":"分布式","level":"1.4","depth":1,"path":"Distributed.md","ref":"Distributed.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Python_Usage.md","mtime":"2019-09-05T12:58:13.459Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-05T13:01:20.249Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

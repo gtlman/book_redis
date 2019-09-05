@@ -1,5 +1,5 @@
 # <center>持久化</center>
-## 快照 RDB
+## <center>快照 RDB</center>
 快照是redis默认的持久化策略
 ###配置项
 ```
@@ -14,7 +14,7 @@ dir /usr/local/redis/data/             #工作目录，rdb文件和aof文件都�
 ### 写时复刻
 redis在执行快照的时候会fork一个子进程，利用了写时复刻技术，写时复刻就是当子进程和父进程的内存空间一致的时候会让他们共用同一段内存空间，直到出现差别。在这里就是当redis父进程没有操作的时候出现共用现象，提高了资源利用率。
 
-## 追加 Append Only File->AOF
+## <center>追加 Append Only File->AOF</center>
 redis默认不开启AOF，可以与RDB同时开启，启动时会以AOF为准（因为AOF的更新频率较高）
 ###配置项
 ```
@@ -27,7 +27,7 @@ auto-aof-rewrite-min-size 64mb      #限制最小重写大小，条件二
 上述条件一和条件二为重写策略，重写调用bgrewriteof，会删减重复的修改，压缩AOF文件
 ```
 
-## RDB vs AOF
+## <center>RDB vs AOF</center>
 |RDB|AOF|
 |:-:|:-:|
 |节省磁盘，RBD会压缩String类型数据|虽然也有重写功能，但文件依然较大|

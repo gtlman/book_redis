@@ -102,33 +102,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="characteristic.html">
-            
-                <a href="characteristic.html">
-            
-                    
-                    特点
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="shortage.html">
-            
-                <a href="shortage.html">
-            
-                    
-                    缺陷
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="Support_Type&Usage.html">
+        <li class="chapter " data-level="1.2" data-path="Support_Type&Usage.html">
             
                 <a href="Support_Type&Usage.html">
             
@@ -141,7 +115,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="Storage.html">
+        <li class="chapter active" data-level="1.3" data-path="Storage.html">
             
                 <a href="Storage.html">
             
@@ -154,12 +128,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="Distributed.html">
+        <li class="chapter " data-level="1.4" data-path="Distributed.html">
             
                 <a href="Distributed.html">
             
                     
                     分布式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Python_Usage.html">
+            
+                <a href="Python_Usage.html">
+            
+                    
+                    与Python交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Characteristic.html">
+            
+                <a href="Characteristic.html">
+            
+                    
+                    特点
             
                 </a>
             
@@ -213,7 +213,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x6301;&#x4E45;&#x5316;"><center>&#x6301;&#x4E45;&#x5316;</center></h1>
-<h2 id="&#x5FEB;&#x7167;-rdb">&#x5FEB;&#x7167; RDB</h2>
+<h2 id="&#x5FEB;&#x7167;-rdb"><center>&#x5FEB;&#x7167; RDB</center></h2>
 <p>&#x5FEB;&#x7167;&#x662F;redis&#x9ED8;&#x8BA4;&#x7684;&#x6301;&#x4E45;&#x5316;&#x7B56;&#x7565;</p>
 <h3 id="&#x914D;&#x7F6E;&#x9879;">&#x914D;&#x7F6E;&#x9879;</h3>
 <pre><code>save 900 1                             #&#x6267;&#x884C;&#x5FEB;&#x7167;&#xFF0C;after 900 sec (15 min) if at least 1 key changed
@@ -224,7 +224,7 @@ dbfilename dump.rdb                    #RDB&#x6587;&#x4EF6;&#x547D;&#x540D;
 dir /usr/local/redis/data/             #&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;rdb&#x6587;&#x4EF6;&#x548C;aof&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;
 </code></pre><h3 id="&#x5199;&#x65F6;&#x590D;&#x523B;">&#x5199;&#x65F6;&#x590D;&#x523B;</h3>
 <p>redis&#x5728;&#x6267;&#x884C;&#x5FEB;&#x7167;&#x7684;&#x65F6;&#x5019;&#x4F1A;fork&#x4E00;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x5229;&#x7528;&#x4E86;&#x5199;&#x65F6;&#x590D;&#x523B;&#x6280;&#x672F;&#xFF0C;&#x5199;&#x65F6;&#x590D;&#x523B;&#x5C31;&#x662F;&#x5F53;&#x5B50;&#x8FDB;&#x7A0B;&#x548C;&#x7236;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x4E00;&#x81F4;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8BA9;&#x4ED6;&#x4EEC;&#x5171;&#x7528;&#x540C;&#x4E00;&#x6BB5;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x76F4;&#x5230;&#x51FA;&#x73B0;&#x5DEE;&#x522B;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x5F53;redis&#x7236;&#x8FDB;&#x7A0B;&#x6CA1;&#x6709;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#x51FA;&#x73B0;&#x5171;&#x7528;&#x73B0;&#x8C61;&#xFF0C;&#x63D0;&#x9AD8;&#x4E86;&#x8D44;&#x6E90;&#x5229;&#x7528;&#x7387;&#x3002;</p>
-<h2 id="&#x8FFD;&#x52A0;-append-only-file-aof">&#x8FFD;&#x52A0; Append Only File-&gt;AOF</h2>
+<h2 id="&#x8FFD;&#x52A0;-append-only-file-aof"><center>&#x8FFD;&#x52A0; Append Only File-&gt;AOF</center></h2>
 <p>redis&#x9ED8;&#x8BA4;&#x4E0D;&#x5F00;&#x542F;AOF&#xFF0C;&#x53EF;&#x4EE5;&#x4E0E;RDB&#x540C;&#x65F6;&#x5F00;&#x542F;&#xFF0C;&#x542F;&#x52A8;&#x65F6;&#x4F1A;&#x4EE5;AOF&#x4E3A;&#x51C6;&#xFF08;&#x56E0;&#x4E3A;AOF&#x7684;&#x66F4;&#x65B0;&#x9891;&#x7387;&#x8F83;&#x9AD8;&#xFF09;</p>
 <h3 id="&#x914D;&#x7F6E;&#x9879;">&#x914D;&#x7F6E;&#x9879;</h3>
 <pre><code>appendonly no                       #&#x9ED8;&#x8BA4;&#x4E0D;&#x5F00;&#x542F;
@@ -234,7 +234,7 @@ appendfsync everysec                #&#x4E09;&#x79CD;&#x7B56;&#x7565;always&#xFF
 auto-aof-rewrite-percentage 100     #&#x5F53;&#x589E;&#x957F;&#x7387;&#x4E3A;100%&#x65F6;&#xFF0C;&#x6761;&#x4EF6;&#x4E00;
 auto-aof-rewrite-min-size 64mb      #&#x9650;&#x5236;&#x6700;&#x5C0F;&#x91CD;&#x5199;&#x5927;&#x5C0F;&#xFF0C;&#x6761;&#x4EF6;&#x4E8C;
 &#x4E0A;&#x8FF0;&#x6761;&#x4EF6;&#x4E00;&#x548C;&#x6761;&#x4EF6;&#x4E8C;&#x4E3A;&#x91CD;&#x5199;&#x7B56;&#x7565;&#xFF0C;&#x91CD;&#x5199;&#x8C03;&#x7528;bgrewriteof&#xFF0C;&#x4F1A;&#x5220;&#x51CF;&#x91CD;&#x590D;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x538B;&#x7F29;AOF&#x6587;&#x4EF6;
-</code></pre><h2 id="rdb-vs-aof">RDB vs AOF</h2>
+</code></pre><h2 id="rdb-vs-aof"><center>RDB vs AOF</center></h2>
 <table>
 <thead>
 <tr>
@@ -312,7 +312,7 @@ auto-aof-rewrite-min-size 64mb      #&#x9650;&#x5236;&#x6700;&#x5C0F;&#x91CD;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"持久化","level":"1.5","depth":1,"next":{"title":"分布式","level":"1.6","depth":1,"path":"Distributed.md","ref":"Distributed.md","articles":[]},"previous":{"title":"支持的数据类型以及对应的应用场景","level":"1.4","depth":1,"path":"Support_Type&Usage.md","ref":"Support_Type&Usage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Storage.md","mtime":"2019-09-01T15:19:41.482Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-02T02:09:51.852Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"持久化","level":"1.3","depth":1,"next":{"title":"分布式","level":"1.4","depth":1,"path":"Distributed.md","ref":"Distributed.md","articles":[]},"previous":{"title":"支持的数据类型以及对应的应用场景","level":"1.2","depth":1,"path":"Support_Type&Usage.md","ref":"Support_Type&Usage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Storage.md","mtime":"2019-09-05T10:52:54.415Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-05T13:01:20.249Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

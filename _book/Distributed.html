@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="Python_Usage.html" />
+    
     
     <link rel="prev" href="Storage.html" />
     
@@ -100,33 +102,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="characteristic.html">
-            
-                <a href="characteristic.html">
-            
-                    
-                    特点
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="shortage.html">
-            
-                <a href="shortage.html">
-            
-                    
-                    缺陷
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="Support_Type&Usage.html">
+        <li class="chapter " data-level="1.2" data-path="Support_Type&Usage.html">
             
                 <a href="Support_Type&Usage.html">
             
@@ -139,7 +115,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="Storage.html">
+        <li class="chapter " data-level="1.3" data-path="Storage.html">
             
                 <a href="Storage.html">
             
@@ -152,12 +128,38 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="Distributed.html">
+        <li class="chapter active" data-level="1.4" data-path="Distributed.html">
             
                 <a href="Distributed.html">
             
                     
                     分布式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Python_Usage.html">
+            
+                <a href="Python_Usage.html">
+            
+                    
+                    与Python交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Characteristic.html">
+            
+                <a href="Characteristic.html">
+            
+                    
+                    特点
             
                 </a>
             
@@ -211,7 +213,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x5206;&#x5E03;&#x5F0F;"><center>&#x5206;&#x5E03;&#x5F0F;</center></h1>
-<h2 id="&#x4E3B;&#x4ECE;&#x590D;&#x5236;">&#x4E3B;&#x4ECE;&#x590D;&#x5236;</h2>
+<h2 id="&#x4E3B;&#x4ECE;&#x590D;&#x5236;"><center>&#x4E3B;&#x4ECE;&#x590D;&#x5236;</center></h2>
 <ol>
 <li>&#x8BFB;&#x5199;&#x5206;&#x79BB;&#xFF1A;&#x901A;&#x8FC7;&#x7ED9;&#x673A;&#x5668;&#x5206;&#x914D;&#x4E3B;&#x4ECE;&#x5173;&#x7CFB;&#xFF0C;&#x4E3B;&#x4ECE;&#x5404;&#x53F8;&#x5176;&#x804C;&#xFF0C;&#x8BA9;master&#x53EA;&#x8D1F;&#x8D23;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x8BA9;slave&#x53EA;&#x8D1F;&#x8D23;&#x8BFB;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x6269;&#x5C55;slave&#x5C31;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x5E94;&#x4ED8;&#x5F53;&#x4ECA;&#x5206;&#x5E03;&#x5F0F;&#x73AF;&#x5883;&#x8BFB;&#x591A;&#x5199;&#x5C11;&#x7684;&#x60C5;&#x51B5;&#x3002;</li>
 <li>&#x9AD8;&#x53EF;&#x7528;&#x6027;&#xFF1A;&#x5F53;master&#x51FA;&#x73B0;&#x6545;&#x969C;&#x65F6;&#xFF0C;slave&#x5141;&#x8BB8;&#x4E0A;&#x4F4D;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x5BB9;&#x707E;&#x7684;&#x5FEB;&#x901F;&#x6062;&#x590D;&#x529F;&#x80FD;&#x3002;<pre><code>[root@centos7-redis redis]# bin/redis-cli     #&#x8FDB;&#x5165;redis&#x5BA2;&#x6237;&#x7AEF;
@@ -227,7 +229,7 @@
 <h3 id="&#x54E8;&#x5175;&#x6A21;&#x5F0F;">&#x54E8;&#x5175;&#x6A21;&#x5F0F;</h3>
 <p>&#x54E8;&#x5175;&#x662F;redis&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B83;&#x4F1A;&#x76D1;&#x63A7;redis&#x7684;&#x72B6;&#x51B5;&#xFF0C;&#x5E76;&#x4E14;&#x5B9A;&#x671F;PING&#x5176;&#x5B83;&#x54E8;&#x5175;&#x4EE5;&#x786E;&#x8BA4;&#x5BF9;&#x65B9;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x672C;&#x673A;&#x53D1;&#x751F;&#x5B95;&#x673A;&#xFF0C;&#x54E8;&#x5175;&#x53EF;&#x4EE5;&#x5411;&#x5176;&#x5B83;&#x54E8;&#x5175;&#x6216;&#x8005;&#x7BA1;&#x7406;&#x5458;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#xFF0C;&#x5982;&#x679C;&#x6839;&#x636E;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#xFF0C;runid&#x6765;&#x9009;&#x4E3E;&#x65B0;&#x7684;master&#xFF0C;&#x5982;&#x679C;&#x540E;&#x9762;&#x539F;master&#x6062;&#x590D;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x53D8;&#x4E3A;slave&#x3002;</p>
 <p>&#x5047;&#x8BBE;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x5B95;&#x673A;&#xFF0C;&#x54E8;&#x5175;1&#x5148;&#x68C0;&#x6D4B;&#x5230;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x7CFB;&#x7EDF;&#x5E76;&#x4E0D;&#x4F1A;&#x9A6C;&#x4E0A;&#x8FDB;&#x884C;failover&#x8FC7;&#x7A0B;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x54E8;&#x5175;1&#x4E3B;&#x89C2;&#x7684;&#x8BA4;&#x4E3A;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x53EF;&#x7528;&#x8FD9;&#x4E2A;&#x73B0;&#x8C61;&#x6210;&#x4E3A;&#x4E3B;&#x89C2;&#x4E0B;&#x7EBF;&#x3002;&#x54E8;&#x5175;&#x4E4B;&#x95F4;&#x4F1A;&#x5B9A;&#x671F;&#x4EA4;&#x6362;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x5B83;&#x54E8;&#x5175;&#x4E5F;&#x68C0;&#x6D4B;&#x5230;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x6570;&#x91CF;&#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x503C;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x54E8;&#x5175;&#x4E4B;&#x5C31;&#x4F1A;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x6295;&#x7968;&#xFF0C;&#x6295;&#x7968;&#x7684;&#x7ED3;&#x679C;&#x7531;&#x4E00;&#x4E2A;&#x54E8;&#x5175;&#x53D1;&#x8D77;&#xFF0C;&#x8FDB;&#x884C;failover&#x64CD;&#x4F5C;&#x3002;&#x5207;&#x6362;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x901A;&#x8FC7;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#xFF0C;&#x8BA9;&#x5404;&#x4E2A;&#x54E8;&#x5175;&#x628A;&#x5DF1;&#x76D1;&#x63A7;&#x7684;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x5B9E;&#x73B0;&#x5207;&#x6362;&#x4E3B;&#x673A;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x79F0;&#x4E3A;&#x5BA2;&#x89C2;&#x4E0B;&#x7EBF;&#x3002;</p>
-<h2 id="&#x96C6;&#x7FA4;">&#x96C6;&#x7FA4;</h2>
+<h2 id="&#x96C6;&#x7FA4;"><center>&#x96C6;&#x7FA4;</center></h2>
 <p>&#x628A;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x6765;&#x63D0;&#x4F9B;&#x670D;&#x52A1;</p>
 <h3 id="&#x6280;&#x672F;&#x76EE;&#x7684;">&#x6280;&#x672F;&#x76EE;&#x7684;</h3>
 <ol>
@@ -289,10 +291,14 @@ CLUSTER COUNTKEYSINSLOT slotnum    #&#x8FD4;&#x56DE;slot&#x4E2D;key&#x6570;&#x76
 
             
                 
-                <a href="Storage.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 持久化">
+                <a href="Storage.html" class="navigation navigation-prev " aria-label="Previous page: 持久化">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="Python_Usage.html" class="navigation navigation-next " aria-label="Next page: 与Python交互">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -301,7 +307,7 @@ CLUSTER COUNTKEYSINSLOT slotnum    #&#x8FD4;&#x56DE;slot&#x4E2D;key&#x6570;&#x76
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"分布式","level":"1.6","depth":1,"previous":{"title":"持久化","level":"1.5","depth":1,"path":"Storage.md","ref":"Storage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Distributed.md","mtime":"2019-09-01T15:45:55.236Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-02T02:09:51.852Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"分布式","level":"1.4","depth":1,"next":{"title":"与Python交互","level":"1.5","depth":1,"path":"Python_Usage.md","ref":"Python_Usage.md","articles":[]},"previous":{"title":"持久化","level":"1.3","depth":1,"path":"Storage.md","ref":"Storage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Distributed.md","mtime":"2019-09-05T10:53:20.888Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-05T13:01:20.249Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

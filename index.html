@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="characteristic.html" />
+    <link rel="next" href="Support_Type&Usage.html" />
     
     
 
@@ -100,33 +100,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="characteristic.html">
-            
-                <a href="characteristic.html">
-            
-                    
-                    特点
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="shortage.html">
-            
-                <a href="shortage.html">
-            
-                    
-                    缺陷
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="Support_Type&Usage.html">
+        <li class="chapter " data-level="1.2" data-path="Support_Type&Usage.html">
             
                 <a href="Support_Type&Usage.html">
             
@@ -139,7 +113,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="Storage.html">
+        <li class="chapter " data-level="1.3" data-path="Storage.html">
             
                 <a href="Storage.html">
             
@@ -152,12 +126,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="Distributed.html">
+        <li class="chapter " data-level="1.4" data-path="Distributed.html">
             
                 <a href="Distributed.html">
             
                     
                     分布式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Python_Usage.html">
+            
+                <a href="Python_Usage.html">
+            
+                    
+                    与Python交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Characteristic.html">
+            
+                <a href="Characteristic.html">
+            
+                    
+                    特点
             
                 </a>
             
@@ -210,8 +210,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
+                                <h1 id="introduction"><center>Introduction</center></h1>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<p>&#x5230;<a href="https://redis.io/" title="redis&#x5B98;&#x65B9;&#x6587;&#x6863;" target="_blank">redis&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5305;<code>redis-xxx.tar.gz</code>&#x6587;&#x4EF6;, &#x6216;&#x8005;&#x50CF;&#x4E0B;&#x9762;&#x90A3;&#x6837;&#x76F4;&#x63A5;&#x7528;wget&#x53BB;&#x4E0B;&#x8F7D;</p>
+<pre><code>wget http://download.redis.io/releases/redis-5.0.4.tar.gz
+tar xzf redis-5.0.4.tar.gz
+cd redis-5.0.4
+make            //&#x7F16;&#x8BD1;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x4E2D;&#x9014;&#x4E2D;&#x65AD;&#x4E86;&#xFF0C;&#x5219;&#x8FD0;&#x884C;make distclean&#x590D;&#x539F;&#x4E00;&#x4E0B;
+mkdir -m755 /usr/local/redis
+make install PREFIX=/usr/local/redis            //&#x5C06;&#x5B89;&#x88C5;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x5728;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#xFF0C;&#x4F1A;&#x5728;Redis&#x4E0B;&#x521B;&#x5EFA;bin&#x76EE;&#x5F55;
+mkdir -m755 /usr/local/redis/conf               //&#x521B;&#x5EFA;conf&#x76EE;&#x5F55;&#x5B58;&#x653E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+mkdir -m755 /usr/local/redis/log                //&#x521B;&#x5EFA;log&#x76EE;&#x5F55;&#x5B58;&#x653E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+mkdir -m755 /usr/local/redis/data                //&#x521B;&#x5EFA;data&#x76EE;&#x5F55;&#x5B58;&#x653E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+cp /opt/software/redis-5.0.4/redis.conf /usr/local/redis/conf/redis.conf    //&#x62F7;&#x8D1D;&#x6A21;&#x677F;&#x5230;conf&#x76EE;&#x5F55;
 
+vim redis.conf
+    &#x5C06;daemonize no &#x6539;&#x4E3A;yes                        //&#x8BBE;&#x7F6E;&#x540E;&#x53F0;&#x542F;&#x52A8;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x8F6C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#xFF0C;&#x6216;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#xFF09;
+    &#x8BBE;&#x7F6E;logfile&#x4E3A;&apos;/usr/local/redis/log/redis_6379.log&apos;     //&#x9700;&#x8981;&#x63D0;&#x524D;&#x521B;&#x5EFA;log&#x76EE;&#x5F55;&#xFF09;
+    &#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x5185;&#x5B58;maxmemory&#x4E3A;751619276&#xFF0C;&#x4E5F;&#x5C31;&#x662F;0.75G           //&#x8FD9;&#x4E2A;&#x6309;&#x9700;&#x5206;&#x914D;
+    &#x8BBE;&#x7F6E;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;dir&#x4E3A;/usr/local/redis/data/       //&#x9700;&#x8981;&#x63D0;&#x524D;&#x521B;&#x5EFA;data&#x76EE;&#x5F55;)
+    &#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;redis&#xFF1A;&#x4FEE;&#x6539;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;IP&#xFF1A;bind IP1 IP2 ...&#x6216;&#x8005;&#x76F4;&#x63A5;&#x6CE8;&#x91CA;&#x6389;-&gt;&#x4EE3;&#x8868;&#x5141;&#x8BB8;&#x6240;&#x6709;IP&#x8BBF;&#x95EE;
+    &#x5173;&#x95ED;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;&#xFF1A;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;protected-mode&#x53C2;&#x6570;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;no&#xFF08;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;&#x9650;&#x5236;&#x4E86;&#x5FC5;&#x987B;&#x8981;bind ip&#x6216;&#x8005;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x8BBF;&#x95EE;&#xFF09;
+
+redis-server /usr/local/redis/conf/redis.conf       //&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x52A8;redis&#x670D;&#x52A1;&#x7AEF;
+redis-cli&#xFF1A;&#x8FDB;&#x5165;&#x5BA2;&#x6237;&#x7AEF;    quit/shutdown
+</code></pre>
                                 
                                 </section>
                             
@@ -239,7 +262,7 @@
             
                 
                 
-                <a href="characteristic.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 特点">
+                <a href="Support_Type&Usage.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 支持的数据类型以及对应的应用场景">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -250,7 +273,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"特点","level":"1.2","depth":1,"path":"characteristic.md","ref":"characteristic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-09-01T12:52:30.332Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-02T02:09:51.852Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"支持的数据类型以及对应的应用场景","level":"1.2","depth":1,"path":"Support_Type&Usage.md","ref":"Support_Type&Usage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-09-05T10:04:24.973Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-05T13:01:20.249Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
