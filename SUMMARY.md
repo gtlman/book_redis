@@ -6,4 +6,4 @@
 * [分布式](Distributed.md)
 * [与Python交互](Python_Usage.md)
 * [特点](Characteristic.md)
-
+* [FAQ](FAQ.md)
